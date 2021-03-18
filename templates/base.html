@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Montserrat:ital,wght@1,600&display=swap"
+        rel="stylesheet">
+
+    <!-- Lightbox -->
+    <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
+    <!-- Custom -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <title style=" font-family: 'Bad Script', cursive;">Dan Dan {% block title %} {% endblock %}</title>
+</head>
+
+<body>
+    <!-- Top Bar -->
+    {% include 'partials/_topbar.html' %}
+    <!-- Nav Bar -->
+    {% include 'partials/_navbar.html' %}
+    <!-- Main Content -->
+    {% block content %} {% endblock %}
+    <!-- Footer -->
+    {% include 'partials/_footer.html' %}
+
+
+
+
+</body>
+
+<script src="{% static 'js/jquery-3.3.1.min.js' %} "></script>
+<script src="{% static 'js/bootstrap.bundle.min.js' %} "></script>
+<script src="{% static 'js/lightbox.min.js' %} "></script>
+<script src="{% static 'js/main.js' %} "></script>
+
+</html>
