@@ -114,7 +114,7 @@ background-repeat: no-repeat;">
             </div>
             <div class="col-md-3">
                 <div class="mb-3">
-                    <form id="form-product">{% csrf_token %}
+                    <form id="form-product" action="{% url 'basket_adding' %}">{% csrf_token %}
                         <input type="number" placeholder="Количевство" name="number" id="number">
                         <button id="submit_btn" class="btn-primary btn-block btn-lg" type="submit"
                             data-product_id="{{ product.id }}" data-title="{{ product.title }}"

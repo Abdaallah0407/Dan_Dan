@@ -39,15 +39,29 @@
                 <li class="nav-item mr-3">
                     <div class="basket-container">
                         <a class="nav-link" href="#">
-                            <i class="fas fa-shopping-cart"></i>
+                            <i class="fas fa-sign-in-alt"></i>
                             Корзина
+                            <span id="basket_total_amount"></span> <span id="basket_total_nmb">
+                                {% if products_total_nmb %}
+                                ({{ products_total_nmb }})
+                                {% else %}
+                                (0)
+                                {% endif %}
+
+                            </span>
                         </a>
-                        <div class="basket-item invisible">
+                        <div class="basket-items invisible">
                             <ul>
-                                <li>isa</li>
+                                {% for product_in_basket in products_in_basket %}
+                                <li>
+                                    {{ product_in_basket.product.title }} {{ product_in_basket.nmb }} шт.
+                                    по {{ product_in_basket.price_per_item }} Сом.
+                                </li>
+                                {% endfor %}
                             </ul>
                         </div>
                     </div>
+
                 </li>
             </ul>
         </div>

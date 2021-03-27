@@ -17,7 +17,7 @@ class Product(models.Model):
     list_date = models.DateTimeField(default=datetime.now, blank=True)
 
     def __str__(self):
-        return self.title
+        return "%s, %s" % (self.price, self.title)
 
     class Meta:
         verbose_name = 'Товар'

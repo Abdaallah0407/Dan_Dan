@@ -180,7 +180,7 @@ input {
   width: 200%;
 }
 
-.basket-item {
+.basket-items {
   position: absolute;
   top: 40px;
   width: 100%;
@@ -188,6 +188,7 @@ input {
   padding: 15px;
   background-color: #212529;
   color: #fff;
+  overflow: hidden;
 }
 
 @media (max-width: 991px) {
